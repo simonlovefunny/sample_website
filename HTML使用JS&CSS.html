@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML使用JS&CSS</title>
+
+    <style>
+        .test-css{ color: blue; font-size: 18px; background-color: #37C7D4;}
+    </style>
+
+    <link ref="stylesheet" href="./css/test.css" charset="UTF-8" type="text/css">
+</head>
+<body>
+
+ <!--1.行内使用JavaScript-->
+ <!--常用于弹出无提示和有提示的弹窗链接,不推荐使用，不易于维护-->
+<div id="div1">
+    <a href="javascript:;">链接ZAB</a>
+    <a href="javascript:;" onclick="alert('测试代码')">有弹窗的链接</a>
+</div>
+
+ <!--2.嵌入式使用JavaScript-->
+ <!--获取标签对应的DOM对象并进行处理-->
+<div id="div2">
+    <a href="javascript:;">链接ZAB</a>
+    <a href="javascript:;">有弹窗的链接</a>
+</div>
+
+ <!--3.外链式，使用外部JavaScript脚本-->
+ <script src="./jquery.js"></script>
+
+
+
+ <p style="color: red; font-size: 18px; background-color: #FFF38F">行内CSS的写法</p>
+
+ <p class="test-css">嵌入式CSS的写法</p>
+
+ <p class="test-link">外链式CSS的写法</p>
+
+<script>
+
+    //获取div2对应的DOM对象并进行处理
+    var oDiv=document.getElementById("div2");
+    oDiv.onclick=function(){
+        zab();
+    }
+  function zab(){
+    alert("这是一段测试代码")
+    }
+</script>
+
+
+
+
+</body>
+</html>
